@@ -20,7 +20,7 @@ public class Log {
 
     /**
      * @param :
-     * @return ·µ»ØÈÕÖ¾Çå¿ÕµÄÌìÊı
+     * @return è¿”å›æ—¥å¿—æ¸…ç©ºçš„å¤©æ•°
      * @date: 2022/7/18 16:56
      */
     public int getDay() {
@@ -28,7 +28,7 @@ public class Log {
     }
 
     /**
-     * @param day: ÉèÖÃÈÕÖ¾¶àÉÙÌìºóÇå¿Õ
+     * @param day: è®¾ç½®æ—¥å¿—å¤šå°‘å¤©åæ¸…ç©º
      * @return
      * @date: 2022/7/18 16:55
      */
@@ -41,7 +41,7 @@ public class Log {
     }
 
     /**
-     * @param pretext: ÈÕÖ¾Ã¿¾äÇ°×º×Ö·û´®
+     * @param pretext: æ—¥å¿—æ¯å¥å‰ç¼€å­—ç¬¦ä¸²
      * @return 
      * @date: 2022/7/18 14:51
      */
@@ -51,7 +51,7 @@ public class Log {
 
     /**
      * @param :
-     * @return ¸ÃÀà¹¹Ôìº¯Êı½ö½¨ÒéÊ¹ÓÃÓÚÎŞÈÕÖ¾ÎÄ¼şĞèÇó
+     * @return è¯¥ç±»æ„é€ å‡½æ•°ä»…å»ºè®®ä½¿ç”¨äºæ— æ—¥å¿—æ–‡ä»¶éœ€æ±‚
      * @date: 2022/7/18 16:25
      */
     public Log() {
@@ -89,8 +89,8 @@ public class Log {
         prevalue=df.format(da);
     }
 
-    /**Ğ´ÈëÈÕÖ¾ÎÄ¼ş
-     * @param str: Ğ´ÈëÈÕÖ¾ÎÄ¼şµÄ×Ö·û´®
+    /**å†™å…¥æ—¥å¿—æ–‡ä»¶
+     * @param str: å†™å…¥æ—¥å¿—æ–‡ä»¶çš„å­—ç¬¦ä¸²
      * @return
      * @date: 2022/7/18 15:05
      */
@@ -108,9 +108,9 @@ public class Log {
 
     }
 
-    /**¾ßÓĞÈÕÖ¾±¨¾¯µÄ·½·¨
-     * @param t:TipÖĞµÄ±¨¾¯¼¶±ğ
-     * @param str:ÈÕÖ¾ĞÅÏ¢
+    /**å…·æœ‰æ—¥å¿—æŠ¥è­¦çš„æ–¹æ³•
+     * @param t:Tipä¸­çš„æŠ¥è­¦çº§åˆ«
+     * @param str:æ—¥å¿—ä¿¡æ¯
      * @return
      * @date: 2022/7/18 15:46
      */
@@ -127,8 +127,8 @@ public class Log {
 
     }
 
-    /**×Ô¶¨ÒåÇé¿öµÄ¾¯±¨·½·¨
-     * @param t:×Ô¶¨ÒåµÄ±¨¾¯¼¶±ğ
+    /**è‡ªå®šä¹‰æƒ…å†µçš„è­¦æŠ¥æ–¹æ³•
+     * @param t:è‡ªå®šä¹‰çš„æŠ¥è­¦çº§åˆ«
      * @param str:
      * @return
      * @date: 2022/7/18 15:49
@@ -148,7 +148,7 @@ public class Log {
 
     /**
      * @param :
-     * @return ¶ÁÈ¡µÄÈÕÖ¾ËùÓĞĞÅÏ¢,·µ»ØÒ»¸ö¼¯ºÏ
+     * @return è¯»å–çš„æ—¥å¿—æ‰€æœ‰ä¿¡æ¯,è¿”å›ä¸€ä¸ªé›†åˆ
      * @date: 2022/7/18 15:52
      */
     public LinkedList<String> read(){
@@ -172,7 +172,7 @@ public class Log {
 
 /**
  * @param li:
- * @return ½«¼¯ºÏ×ª»¯Îª×Ö·û´®
+ * @return å°†é›†åˆè½¬åŒ–ä¸ºå­—ç¬¦ä¸²
  * @date: 2022/7/18 16:11
  */
     public String read(LinkedList<String> li){
@@ -186,9 +186,9 @@ public class Log {
 
 
 /**
- * @param li: ¶Áµ½µÄÈÕÖ¾ÎÄ¼ş
- * @param t: É¸Ñ¡µÄ±¨¾¯¼¶±ğ
- * @return ÈÕÖ¾ÖĞº¬ÓĞ¸ÃÀà±¨¾¯µÄ½á¹û
+ * @param li: è¯»åˆ°çš„æ—¥å¿—æ–‡ä»¶
+ * @param t: ç­›é€‰çš„æŠ¥è­¦çº§åˆ«
+ * @return æ—¥å¿—ä¸­å«æœ‰è¯¥ç±»æŠ¥è­¦çš„ç»“æœ
  * @date: 2022/7/18 16:21
  */
     public String select(LinkedList<String> li,Tip t){
@@ -217,13 +217,13 @@ public class Log {
             System.out.printf("\33[31;4m"+prevalue+" "+t+" "+str+"\n");
         else if(t==Tip.MESSAGE)
             System.out.printf("\33[34;4m"+prevalue+" "+t+" "+str+"\n");
-        else if(t==Tip.MESSAGE)
+        else if(t==Tip.EXCEPTION)
             System.out.printf("\33[35;4m"+prevalue+" "+t+" "+str+"\n");
     }
 
 /**
- * @param b: ½«¸ÃÈÕÖ¾ÎÄ¼ş¸´ÖÆ»ò¼ôÇĞµ½Ê²Ã´Î»ÖÃ,×¢Òâ¼ôÇĞºó¸Ã¶ÔÏó»á±»À¬»ø»ØÊÕ£¡
- * @param isCopy: trueÎª¸´ÖÆ£¬falseÎª¼ôÇĞ
+ * @param b: å°†è¯¥æ—¥å¿—æ–‡ä»¶å¤åˆ¶æˆ–å‰ªåˆ‡åˆ°ä»€ä¹ˆä½ç½®,æ³¨æ„å‰ªåˆ‡åè¯¥å¯¹è±¡ä¼šè¢«åƒåœ¾å›æ”¶ï¼
+ * @param isCopy: trueä¸ºå¤åˆ¶ï¼Œfalseä¸ºå‰ªåˆ‡
  * @return 
  * @date: 2022/7/18 16:35
  */
