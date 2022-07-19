@@ -18,6 +18,15 @@ public class Log {
     private BufferedWriter fw;
     private BufferedReader fr;
     private int day=10;
+    
+    
+    public String getPretip() {
+        return pretip;
+    }
+
+    public void setPretip(String pretip) {
+        this.pretip = pretip;
+    }
 
     /**
      * @param :
