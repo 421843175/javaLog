@@ -1,10 +1,17 @@
 package jupiter;
 
 public enum Tip {
-    MESSAGE("信息"),
-    WARRING("警告"),
-    ERROR("错误"),
-    EXCEPTION("异常");
+    MESSAGE("淇℃伅"),
+    WARRING("璀﹀憡"),
+    ERROR("閿欒"),
+    EXCEPTION("寮傚父"),
+    TS("璋冭瘯"),
+    ZY("娉ㄦ剰"),
+    JJ("璀︽垝"),
+    GJ("鍛婅"),
+    YAN("涓ラ噸"),
+    ZM("鑷村懡");
+
     private final String v;
     private Tip(String v){
         this.v=v;
