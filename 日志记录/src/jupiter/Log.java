@@ -13,6 +13,7 @@ public class Log {
     private Date da;
     private File f;
     private String pretext="[yyyy-MM-dd HH:mm:ss.SSS]";
+    private String pretip="";
     private String prevalue;
     private BufferedWriter fw;
     private BufferedReader fr;
@@ -100,7 +101,7 @@ public class Log {
         try {
             if(clearLog()) fw=new BufferedWriter(new FileWriter(f,false));
             fw=new BufferedWriter(new FileWriter(f,true));
-            fw.write(prevalue+str+"\n");
+            fw.write(prevalue+" "+pretip+" "+str+"\n");
             fw.flush();
         } catch (IOException e) {
             e.printStackTrace();
@@ -119,7 +120,7 @@ public class Log {
         try {
             if(clearLog()) fw=new BufferedWriter(new FileWriter(f,false));
             fw=new BufferedWriter(new FileWriter(f,true));
-            fw.write(prevalue+" "+t+" "+str+"\n");
+            fw.write(prevalue+" "+t+" "+pretip+" "+str+"\n");
             fw.flush();
         } catch (IOException e) {
             e.printStackTrace();
@@ -138,7 +139,7 @@ public class Log {
         try {
             if(clearLog()) fw=new BufferedWriter(new FileWriter(f,false));
             fw=new BufferedWriter(new FileWriter(f,true));
-            fw.write(prevalue+" "+t+" "+str+"\n");
+            fw.write(prevalue+" "+t+" "+pretip+" "+str+"\n");
             fw.flush();
         } catch (IOException e) {
             e.printStackTrace();
@@ -212,13 +213,15 @@ public class Log {
     public void printf(Tip t,String str){
         pz();
         if(t==Tip.WARRING)
-        System.out.printf("\33[33;4m"+prevalue+" "+t+" "+str+"\n");
+        System.out.printf("\33[33;4m"+prevalue+" "+t+" "+pretip+" "+str+"\n");
         else if(t==Tip.ERROR)
-            System.out.printf("\33[31;4m"+prevalue+" "+t+" "+str+"\n");
+            System.out.printf("\33[31;4m"+prevalue+" "+t+" "+pretip+" "+str+"\n");
         else if(t==Tip.MESSAGE)
-            System.out.printf("\33[34;4m"+prevalue+" "+t+" "+str+"\n");
+            System.out.printf("\33[34;4m"+prevalue+" "+t+" "+pretip+" "+str+"\n");
         else if(t==Tip.EXCEPTION)
-            System.out.printf("\33[35;4m"+prevalue+" "+t+" "+str+"\n");
+            System.out.printf("\33[35;4m"+prevalue+" "+t+" "+pretip+" "+str+"\n");
+        else
+            System.out.printf("\33[30;4m"+prevalue+" "+t+" "+pretip+" "+str+"\n");
     }
 
 /**
